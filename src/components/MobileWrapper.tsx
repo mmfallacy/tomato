@@ -2,6 +2,9 @@ import { Box, Center, useMediaQuery } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 import { MOBILE_VW, MOBILE_VH } from '../utils/constants';
 
+/**
+ * Component to simulate Phone's Notch
+ */
 const Notch = ({ oH, oW }: { oH: number; oW: number }) => (
     <Box
         h={`${oH}px`}
@@ -13,6 +16,9 @@ const Notch = ({ oH, oW }: { oH: number; oW: number }) => (
     ></Box>
 );
 
+/**
+ * Component to act as Phone bezels for phone visualization
+ */
 const PhoneContainer = ({
     oW,
     oH,
@@ -43,6 +49,9 @@ const PhoneContainer = ({
     );
 };
 
+/**
+ * MobileWrapper component which wraps App's mobile view for Desktop and other large devices
+ */
 export const MobileWrapper = ({ children }: { children: ReactNode }) => {
     return (
         <Center h="100vh">
