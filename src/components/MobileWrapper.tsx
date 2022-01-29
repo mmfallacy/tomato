@@ -62,6 +62,7 @@ export const MobileWrapper = ({ children }: { children: ReactNode }) => {
                     bg="gray.100"
                     position="absolute"
                     borderRadius={5}
+                    overflow="hidden"
                 >
                     {children}
                 </Box>
