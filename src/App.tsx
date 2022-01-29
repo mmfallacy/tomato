@@ -1,7 +1,12 @@
 import { MobileWrapper } from './components';
+import { Start } from './routes';
 
 function App() {
-    return <MobileWrapper>test</MobileWrapper>;
+    return (
+        <MobileWrapper>
+            <Start />
+        </MobileWrapper>
+    );
 }
 
 export default App;
