@@ -10,4 +10,8 @@ export const Theme = extendTheme({
         },
     },
     colors: Colors,
+    fonts: {
+        body: 'Open Sans, Segoe UI, Tahoma, sans-serif;',
+        heading: 'Raleway, Trebuchet MS, Avenir, Segoe UI, sans-serif',
+    },
 });
