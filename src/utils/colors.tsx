@@ -6,10 +6,10 @@ export const Colors = {
         700: '#4D3D57',
     },
     brand: {
-        100: '#E94457',
-        300: '#EF798A',
-        600: '#FBD1D0',
-        700: '#FCE8EB',
+        100: '#FCE8EB',
+        300: '#FBD1D0',
+        700: '#EF798A',
+        600: '#E94457',
     },
     shade: {
         100: '#FAFAFA',
