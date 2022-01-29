@@ -1,24 +1,45 @@
-import { Box, BoxProps, Button, Text } from '@chakra-ui/react';
-import { AiOutlineArrowRight } from 'react-icons/ai';
-import { ReactComponent as Illustration1 } from './Illustration1.svg';
+import {
+    Box,
+    BoxProps,
+    Button,
+    chakra,
+    Circle,
+    Flex,
+    Heading,
+} from '@chakra-ui/react';
+import { AiOutlineArrowRight as AiOutlineArrowRightRaw } from 'react-icons/ai';
+import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
 
-/**
- * Box component with 100vh as border radius and width === height
- */
-const Circle = (props: BoxProps) => (
-    <Box {...props} w={props.h} borderRadius="100vh"></Box>
-);
+const Illustration1 = chakra(Illustration1Raw);
+const AiOutlineArrowRight = chakra(AiOutlineArrowRightRaw);
 
+const Filler = (props: BoxProps) => <Box {...props} />;
 const Start = () => {
     return (
-        <Box>
-            <Text>Tomato</Text>
-            <Circle bg="brand.300" h="200px" />
-            <Text>A pomodoro app that gets you working</Text>
-            <Button>
-                <AiOutlineArrowRight />
-            </Button>
-            <Illustration1 />
+        <Box pos="relative" bg="white" boxSize="100%">
+            <Circle bg="brand.300" size="3xl" pos="absolute" top="-8rem" />
+            <Illustration1 pos="absolute" right="0" top="8rem" />
+            <Flex direction="column" p="20px" pos="absolute" bottom="4rem">
+                <Heading fontSize="5xl" color="accent.600">
+                    Tomato
+                </Heading>
+                <Filler h="2rem" />
+                <Heading fontSize="xl" maxW="70%" color="accent.600">
+                    A pomodoro app that gets you working
+                </Heading>
+                <Button
+                    d="flex"
+                    boxSize="4rem"
+                    p="0"
+                    bg="accent.600"
+                    borderRadius="full"
+                    _hover={{ transform: 'scale(1.1)', bg: 'accent.300' }}
+                    _active={{ transform: 'scale(0.9)', bg: 'accent.700' }}
+                    alignSelf="end"
+                >
+                    <AiOutlineArrowRight boxSize="50%" fill="white" />
+                </Button>
+            </Flex>
         </Box>
     );
 };
