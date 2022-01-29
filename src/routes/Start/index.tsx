@@ -1,5 +1,6 @@
 import { Box, BoxProps, Button, Text } from '@chakra-ui/react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
+import { ReactComponent as Illustration1 } from './Illustration1.svg';
 
 /**
  * Box component with 100vh as border radius and width === height
@@ -17,6 +18,7 @@ const Start = () => {
             <Button>
                 <AiOutlineArrowRight />
             </Button>
+            <Illustration1 />
         </Box>
     );
 };
