@@ -1,10 +1,10 @@
 import { MobileWrapper } from './components';
-import { Start } from './routes';
+import { Login } from './routes';
 
 function App() {
     return (
         <MobileWrapper>
-            <Start />
+            <Login />
         </MobileWrapper>
     );
 }
