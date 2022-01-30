@@ -1,6 +1,5 @@
 import {
     Box,
-    BoxProps,
     Button,
     ButtonProps,
     chakra,
@@ -9,6 +8,7 @@ import {
     Heading,
 } from '@chakra-ui/react';
 import { AiOutlineArrowRight as AiOutlineArrowRightRaw } from 'react-icons/ai';
+import { Filler } from '../../components';
 import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
 
 /**
@@ -16,11 +16,6 @@ import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
  */
 const Illustration1 = chakra(Illustration1Raw);
 const AiOutlineArrowRight = chakra(AiOutlineArrowRightRaw);
-
-/**
- * Filler component that acts as a fixed height/width spacer
- */
-const Filler = (props: BoxProps) => <Box {...props} />;
 
 /**
  * Action Button
