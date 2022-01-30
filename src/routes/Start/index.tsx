@@ -44,7 +44,7 @@ const Start = () => {
 
             <Illustration1 pos="absolute" right="0" top="8rem" />
 
-            <Flex direction="column" p="20px" pos="absolute" bottom="4rem">
+            <Flex direction="column" p="1.25rem" pos="absolute" bottom="4rem">
                 <Heading fontSize="5xl" color="accent.600">
                     Tomato
                 </Heading>
