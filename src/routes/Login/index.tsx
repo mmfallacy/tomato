@@ -1,13 +1,14 @@
-import { Box, Button, chakra, Circle, Flex, Heading } from '@chakra-ui/react';
-import { Filler } from '../../components';
+import { Box, Button, chakra, Circle, Flex } from '@chakra-ui/react';
+import { Filler, Header } from '../../components';
 import { ReactComponent as Illustration2Raw } from './Illustration2.svg';
+import { AiOutlineTags } from 'react-icons/ai';
 
 const Illustration2 = chakra(Illustration2Raw);
 
 const Login = () => {
     return (
         <Box pos="relative" bg="brand.300" boxSize="100%">
-            <Heading>Tomato</Heading>
+            <Header pos="relative" zIndex="docked" />
             <Circle
                 bg="white"
                 size="3xl"
