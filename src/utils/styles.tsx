@@ -10,6 +10,19 @@ const ButtonOverrides = {
             transform: 'scale(0.975)',
         },
     },
+    variants: {
+        outline: {
+            border: '0.1875rem solid',
+        },
+    },
+    defaultProps: {
+        textStyle: 'heading',
+    },
+};
+
+const Fonts = {
+    body: 'Open Sans, Segoe UI, Tahoma, sans-serif;',
+    heading: 'Raleway, Trebuchet MS, Avenir, Segoe UI, sans-serif',
 };
 
 export const Theme = extendTheme({
@@ -24,8 +37,6 @@ export const Theme = extendTheme({
         },
     },
     colors: Colors,
-    fonts: {
-        body: 'Open Sans, Segoe UI, Tahoma, sans-serif;',
-        heading: 'Raleway, Trebuchet MS, Avenir, Segoe UI, sans-serif',
-    },
+    fonts: Fonts,
+    textStyles: Fonts,
 });
