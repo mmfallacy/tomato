@@ -25,9 +25,11 @@ const Login = () => {
                 bottom="4rem"
                 w="100%"
             >
-                <Button>Sign In</Button>
+                <Button colorScheme="accent" fontSize="lg">
+                    Sign In
+                </Button>
                 <Filler h="2rem" />
-                <Button colorScheme="blue" variant="outline">
+                <Button colorScheme="accent" variant="outline" fontSize="lg">
                     Use as Guest
                 </Button>
             </Flex>
