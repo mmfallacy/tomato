@@ -11,7 +11,6 @@ const Login = () => {
             <Circle
                 bg="white"
                 size="3xl"
-                r
                 pos="absolute"
                 top="-2rem"
                 right="-1rem"
