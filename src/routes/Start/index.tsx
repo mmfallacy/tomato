@@ -6,11 +6,10 @@ import {
     Circle,
     Flex,
     Heading,
-    ChakraComponent,
     forwardRef,
 } from '@chakra-ui/react';
 import { AiOutlineArrowRight as AiOutlineArrowRightRaw } from 'react-icons/ai';
-import { Link, LinkProps } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Filler } from '../../components';
 import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
 
