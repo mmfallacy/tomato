@@ -6,8 +6,11 @@ import {
     Circle,
     Flex,
     Heading,
+    ChakraComponent,
+    forwardRef,
 } from '@chakra-ui/react';
 import { AiOutlineArrowRight as AiOutlineArrowRightRaw } from 'react-icons/ai';
+import { Link, LinkProps } from 'react-router-dom';
 import { Filler } from '../../components';
 import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
 
@@ -20,18 +23,19 @@ const AiOutlineArrowRight = chakra(AiOutlineArrowRightRaw);
 /**
  * Action Button
  */
-const Action = (props: ButtonProps) => (
+
+const Action = forwardRef<ButtonProps, 'button'>((props, ref) => (
     <Button
         boxSize="4rem"
         p="0"
         borderRadius="full"
         colorScheme="accent"
         {...props}
+        ref={ref}
     >
         <AiOutlineArrowRight boxSize="50%" fill="white" />
     </Button>
-);
-
+));
 /**
  * Start page for first time users
  */
@@ -53,7 +57,7 @@ const Start = () => {
                     A pomodoro app that gets you working
                 </Heading>
 
-                <Action alignSelf="end" />
+                <Action as={Link} to="/login" alignSelf="end" />
             </Flex>
         </Box>
     );

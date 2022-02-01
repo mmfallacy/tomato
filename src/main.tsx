@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter } from 'react-router-dom';
 import { Theme } from './utils/styles';
 
 const Providers = ({ children }: { children: ReactNode }) => (
@@ -10,9 +11,11 @@ const Providers = ({ children }: { children: ReactNode }) => (
 
 ReactDOM.render(
     <React.StrictMode>
-        <Providers>
-            <App />
-        </Providers>
+        <BrowserRouter>
+            <Providers>
+                <App />
+            </Providers>
+        </BrowserRouter>
     </React.StrictMode>,
     document.getElementById('root')
 );
