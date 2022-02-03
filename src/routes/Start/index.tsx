@@ -12,12 +12,19 @@ import { AiOutlineArrowRight as AiOutlineArrowRightRaw } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { Filler } from '../../components';
 import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
+import { default as StartAnimation } from './animations';
+import { motion } from 'framer-motion';
 
 /**
  * Pass React SVG Components to chakra factory for chakra props support
  */
 const Illustration1 = chakra(Illustration1Raw);
 const AiOutlineArrowRight = chakra(AiOutlineArrowRightRaw);
+
+/**
+ * Pass Chakra Components to motion factory for framer-motion support
+ */
+const MotionCircle = motion(Circle);
 
 /**
  * Action Button
@@ -39,9 +46,18 @@ const Action = forwardRef<ButtonProps, 'button'>((props, ref) => (
  * Start page for first time users
  */
 const Start = () => {
+    console.log(StartAnimation);
     return (
         <Box pos="relative" bg="white" boxSize="100%">
-            <Circle bg="brand.300" size="3xl" pos="absolute" top="-8rem" />
+            <MotionCircle
+                bg="brand.300"
+                size="3xl"
+                pos="absolute"
+                top="-8rem"
+                initial="initial"
+                animate="in"
+                variants={StartAnimation.Circle}
+            />
 
             <Illustration1 pos="absolute" right="0" top="8rem" />
 
