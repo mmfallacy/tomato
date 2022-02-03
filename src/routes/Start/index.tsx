@@ -25,6 +25,8 @@ const AiOutlineArrowRight = chakra(AiOutlineArrowRightRaw);
  * Pass Chakra Components to motion factory for framer-motion support
  */
 const MotionCircle = motion(Circle);
+const MotionBox = motion(Box);
+const MotionHeading = motion(Heading);
 
 /**
  * Action Button
@@ -59,18 +61,40 @@ const Start = () => {
                 variants={StartAnimation.Circle}
             />
 
-            <Illustration1 pos="absolute" right="0" top="8rem" />
+            <MotionBox
+                pos="absolute"
+                right="0"
+                top="8rem"
+                initial="initial"
+                animate="in"
+                variants={StartAnimation.Illustration}
+            >
+                <Illustration1 />
+            </MotionBox>
 
             <Flex direction="column" p="1.25rem" pos="absolute" bottom="4rem">
-                <Heading fontSize="5xl" color="accent.500">
+                <MotionHeading
+                    fontSize="5xl"
+                    color="accent.500"
+                    initial="initial"
+                    animate="in"
+                    variants={StartAnimation.Header}
+                >
                     Tomato
-                </Heading>
+                </MotionHeading>
 
                 <Filler h="2rem" />
 
-                <Heading fontSize="xl" maxW="70%" color="accent.500">
+                <MotionHeading
+                    fontSize="xl"
+                    maxW="70%"
+                    color="accent.500"
+                    initial="initial"
+                    animate="in"
+                    variants={StartAnimation.Subheader}
+                >
                     A pomodoro app that gets you working
-                </Heading>
+                </MotionHeading>
 
                 <Action as={Link} to="/login" alignSelf="end" />
             </Flex>
