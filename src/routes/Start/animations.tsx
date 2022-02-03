@@ -44,7 +44,7 @@ const OnMount: Animation = {
         opacity: 1,
         transition: {
             default: { DefaultTransitions },
-            x: { duration: (DefaultTransitions.duration * 2) / 3 },
+            x: { type: 'spring', stiffness: 100 },
         },
     },
     Subheader: {
@@ -52,7 +52,7 @@ const OnMount: Animation = {
         opacity: 1,
         transition: {
             default: { DefaultTransitions },
-            x: { duration: (DefaultTransitions.duration * 2) / 3, delay: 0.5 },
+            x: { type: 'spring', stiffness: 100, delay: 0.2 },
         },
     },
 };
