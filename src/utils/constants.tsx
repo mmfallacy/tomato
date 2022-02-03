@@ -24,4 +24,4 @@ export const DEFAULT_SIZES_CHAKRA = {
         lg: '1024px',
         xl: '1280px',
     },
-};
+} as const;
