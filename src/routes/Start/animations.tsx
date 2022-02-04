@@ -2,9 +2,9 @@ import { Transition } from 'framer-motion';
 import {
     Animation,
     RouteComponentVariants,
-    AnimationTimings,
     RouteVariants,
-} from '../../utils/types';
+    generateComponentVariants,
+} from '../../utils/animation';
 
 const DefaultTransitions: Transition = {
     duration: 0.75,
@@ -55,21 +55,6 @@ const OnMount: Animation = {
             x: { type: 'spring', stiffness: 100, delay: 0.2 },
         },
     },
-};
-
-const generateComponentVariants = (
-    obj: RouteVariants
-): RouteComponentVariants => {
-    const newObj: RouteComponentVariants = {};
-    console.log(obj);
-    for (const timing in obj)
-        for (const component in obj[timing as AnimationTimings]) {
-            if (!(component in newObj)) newObj[component] = {};
-            newObj[component][timing as AnimationTimings] =
-                obj[timing as AnimationTimings][component];
-        }
-
-    return newObj;
 };
 
 const Animations: RouteComponentVariants = generateComponentVariants({
