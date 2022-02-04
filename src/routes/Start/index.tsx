@@ -50,7 +50,15 @@ const Action = forwardRef<ButtonProps | MotionProps, 'button'>((props, ref) => (
  */
 const Start = () => {
     return (
-        <Box pos="relative" bg="white" boxSize="100%">
+        <MotionBox
+            pos="relative"
+            bg="white"
+            boxSize="100%"
+            marginBottom="2rem"
+            initial="initial"
+            exit="out"
+            variants={StartAnimation.Page}
+        >
             <MotionCircle
                 bg="brand.300"
                 size="3xl"
@@ -58,6 +66,7 @@ const Start = () => {
                 top="-8rem"
                 initial="initial"
                 animate="in"
+                exit="out"
                 variants={StartAnimation.Circle}
             />
 
@@ -67,6 +76,7 @@ const Start = () => {
                 top="8rem"
                 initial="initial"
                 animate="in"
+                exit="out"
                 variants={StartAnimation.Illustration}
             >
                 <Illustration1 />
@@ -78,6 +88,7 @@ const Start = () => {
                     color="accent.500"
                     initial="initial"
                     animate="in"
+                    exit="out"
                     variants={StartAnimation.Header}
                 >
                     Tomato
@@ -91,6 +102,7 @@ const Start = () => {
                     color="accent.500"
                     initial="initial"
                     animate="in"
+                    exit="out"
                     variants={StartAnimation.Subheader}
                 >
                     A pomodoro app that gets you working
@@ -102,10 +114,11 @@ const Start = () => {
                     alignSelf="end"
                     initial="initial"
                     animate="in"
+                    exit="out"
                     variants={StartAnimation.Action}
                 />
             </Flex>
-        </Box>
+        </MotionBox>
     );
 };
 

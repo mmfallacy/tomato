@@ -5,6 +5,7 @@ import {
     RouteVariants,
     generateComponentVariants,
 } from '../../utils/animation';
+import { Colors } from '../../utils/colors';
 
 const DefaultTransitions: Transition = {
     duration: 0.75,
@@ -13,7 +14,10 @@ const DefaultTransitions: Transition = {
 
 const Initial: Animation = {
     Circle: {
-        transform: 'scale(0.1)',
+        transform: 'scale(0.1) rotateY(0deg)',
+        top: '-8rem',
+        left: '0%',
+        background: Colors.brand[300],
     },
     Illustration: {
         opacity: 0,
@@ -31,11 +35,15 @@ const Initial: Animation = {
         x: '-40%',
         opacity: 0,
     },
+    Page: {
+        perspective: '200px',
+    },
 };
 
 const OnMount: Animation = {
     Circle: {
-        transform: 'scale(1)',
+        transform: 'scale(1) rotateY(0deg)',
+        left: '0%',
         transition: { ...DefaultTransitions },
     },
     Illustration: {
@@ -63,9 +71,52 @@ const OnMount: Animation = {
     },
 };
 
+const OnDismount: Animation = {
+    Circle: {
+        transform: 'scale(1) rotateY(-180deg)',
+        top: '-2rem',
+        left: '-82%',
+        background: 'rgb(255,255,255)',
+        transition: {
+            default: {
+                ...DefaultTransitions,
+                delay: 1,
+                duration: 0.75,
+            },
+            background: { delay: 1.5, duration: 0.2 },
+            transform: {
+                delay: 0.5,
+                duration: 2,
+            },
+        },
+    },
+    Illustration: {
+        opacity: 0,
+    },
+    Subheader: {
+        opacity: 0,
+    },
+    Header: {
+        opacity: 0,
+    },
+    Action: {
+        opacity: 0,
+    },
+    Page: {
+        background: Colors.brand[300],
+        transition: {
+            ...DefaultTransitions,
+            delay: 1.5,
+            duration: 0.2,
+            ease: 'linear',
+        },
+    },
+};
+
 const Animations: RouteComponentVariants = generateComponentVariants({
     initial: Initial,
     in: OnMount,
+    out: OnDismount,
 } as RouteVariants);
 
 export default Animations;
