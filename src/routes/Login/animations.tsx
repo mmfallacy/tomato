@@ -34,27 +34,22 @@ const OnMount: Animation = {
     Header: {
         opacity: 1,
         x: 0,
-        transition: DefaultTransitions,
+        transition: { ...DefaultTransitions, delay: 0.2 * 0 },
     },
     Illustration: {
         opacity: 1,
         x: 0,
-        transition: DefaultTransitions,
+        transition: { ...DefaultTransitions, delay: 0.2 * 1 },
     },
     Primary: {
         opacity: 1,
         x: 0,
-        transition: DefaultTransitions,
+        transition: { ...DefaultTransitions, delay: 0.2 * 2 },
     },
     Secondary: {
         opacity: 1,
         x: 0,
-        transition: DefaultTransitions,
-    },
-    Page: {
-        transition: {
-            staggerChildren: 0.2,
-        },
+        transition: { ...DefaultTransitions, delay: 0.2 * 3 },
     },
 };
 

@@ -21,8 +21,8 @@ const Login = () => {
             pos="relative"
             bg="brand.300"
             boxSize="100%"
+            initial="initial"
             animate="in"
-            variants={LoginAnimations.Page}
         >
             <MotionBox
                 initial="initial"
