@@ -4,8 +4,8 @@ import {
     RouteComponentVariants,
     RouteVariants,
     generateComponentVariants,
-} from '../../utils/animation';
-import { Colors } from '../../utils/colors';
+} from '@/utils/animation';
+import { Colors } from '@/utils/colors';
 
 const DefaultTransitions: Transition = {
     duration: 0.75,

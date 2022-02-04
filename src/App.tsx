@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom';
-import { AnimatedRoutes, MobileWrapper } from './components';
-import { Login, Start } from './routes';
+import { AnimatedRoutes, MobileWrapper } from '@/components';
+import { Login, Start } from '@/routes';
 
 function App() {
     return (

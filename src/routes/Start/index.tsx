@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { AiOutlineArrowRight as AiOutlineArrowRightRaw } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
-import { Filler } from '../../components';
+import { Filler } from '@/components';
 import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
 import { default as StartAnimation } from './animations';
 import { motion, MotionProps } from 'framer-motion';

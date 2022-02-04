@@ -1,5 +1,5 @@
 import { Box, Button, chakra, Circle, Flex } from '@chakra-ui/react';
-import { Filler, Header } from '../../components';
+import { Filler, Header } from '@/components';
 import { ReactComponent as Illustration2Raw } from './Illustration2.svg';
 
 const Illustration2 = chakra(Illustration2Raw);
