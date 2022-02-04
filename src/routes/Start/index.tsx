@@ -49,7 +49,6 @@ const Action = forwardRef<ButtonProps | MotionProps, 'button'>((props, ref) => (
  * Start page for first time users
  */
 const Start = () => {
-    console.log(StartAnimation);
     return (
         <Box pos="relative" bg="white" boxSize="100%">
             <MotionCircle

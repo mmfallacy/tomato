@@ -68,5 +68,4 @@ const Animations: RouteComponentVariants = generateComponentVariants({
     in: OnMount,
 } as RouteVariants);
 
-console.log(Animations);
 export default Animations;
