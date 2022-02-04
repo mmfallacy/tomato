@@ -1,13 +1,39 @@
 import { Box, Button, chakra, Circle, Flex } from '@chakra-ui/react';
 import { Filler, Header } from '@/components';
 import { ReactComponent as Illustration2Raw } from './Illustration2.svg';
+import { motion } from 'framer-motion';
+import LoginAnimations from './animations';
 
+/**
+ * Pass React SVG Components to chakra factory for chakra props support
+ */
 const Illustration2 = chakra(Illustration2Raw);
+
+/**
+ * Pass Chakra Components to motion factory for framer-motion support
+ */
+const MotionBox = motion(Box);
+const MotionButton = motion(Button);
 
 const Login = () => {
     return (
-        <Box pos="relative" bg="brand.300" boxSize="100%">
-            <Header pos="relative" zIndex="docked" />
+        <Box
+            pos="relative"
+            bg="brand.300"
+            boxSize="100%"
+            animate="in"
+            variants={LoginAnimations.Page}
+        >
+            <MotionBox
+                initial="initial"
+                animate="in"
+                variants={LoginAnimations.Header}
+                pos="relative"
+                zIndex="docked"
+            >
+                <Header />
+            </MotionBox>
+
             <Circle
                 bg="white"
                 size="3xl"
@@ -15,7 +41,16 @@ const Login = () => {
                 top="-2rem"
                 right="-1rem"
             />
-            <Illustration2 pos="absolute" top="8rem" />
+
+            <MotionBox
+                pos="absolute"
+                top="8rem"
+                initial="initial"
+                animate="in"
+                variants={LoginAnimations.Illustration}
+            >
+                <Illustration2 />
+            </MotionBox>
 
             <Flex
                 pos="absolute"
@@ -24,13 +59,26 @@ const Login = () => {
                 bottom="4rem"
                 w="100%"
             >
-                <Button colorScheme="accent" fontSize="lg">
+                <MotionButton
+                    colorScheme="accent"
+                    fontSize="lg"
+                    initial="initial"
+                    animate="in"
+                    variants={LoginAnimations.Primary}
+                >
                     Sign In
-                </Button>
+                </MotionButton>
                 <Filler h="2rem" />
-                <Button colorScheme="accent" variant="outline" fontSize="lg">
+                <MotionButton
+                    colorScheme="accent"
+                    variant="outline"
+                    fontSize="lg"
+                    initial="initial"
+                    animate="in"
+                    variants={LoginAnimations.Secondary}
+                >
                     Use as Guest
-                </Button>
+                </MotionButton>
             </Flex>
         </Box>
     );
