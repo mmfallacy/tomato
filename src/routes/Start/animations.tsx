@@ -27,32 +27,38 @@ const Initial: Animation = {
         x: '-110%',
         opacity: 0,
     },
+    Action: {
+        x: '-40%',
+        opacity: 0,
+    },
 };
 
 const OnMount: Animation = {
     Circle: {
         transform: 'scale(1)',
-        transition: { ...DefaultTransitions, type: 'spring', stiffness: 100 },
+        transition: { ...DefaultTransitions },
     },
     Illustration: {
         opacity: 1,
         y: 0,
-        transition: { ...DefaultTransitions, delay: 0.2 },
+        transition: { ...DefaultTransitions, duration: 0.5, delay: 0.2 },
     },
     Header: {
         x: 0,
         opacity: 1,
-        transition: {
-            default: { DefaultTransitions },
-            x: { type: 'spring', stiffness: 100 },
-        },
+        transition: { ...DefaultTransitions, delay: 0.2 },
     },
     Subheader: {
         x: 0,
         opacity: 1,
+        transition: { ...DefaultTransitions, delay: 0.4 },
+    },
+    Action: {
+        x: 0,
+        opacity: 1,
         transition: {
-            default: { DefaultTransitions },
-            x: { type: 'spring', stiffness: 100, delay: 0.2 },
+            ...DefaultTransitions,
+            delay: 0.4,
         },
     },
 };

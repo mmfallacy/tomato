@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import { Filler } from '../../components';
 import { ReactComponent as Illustration1Raw } from './Illustration1.svg';
 import { default as StartAnimation } from './animations';
-import { motion } from 'framer-motion';
+import { motion, MotionProps } from 'framer-motion';
 
 /**
  * Pass React SVG Components to chakra factory for chakra props support
@@ -27,13 +27,14 @@ const AiOutlineArrowRight = chakra(AiOutlineArrowRightRaw);
 const MotionCircle = motion(Circle);
 const MotionBox = motion(Box);
 const MotionHeading = motion(Heading);
+const MotionButton = motion(Button);
 
 /**
  * Action Button
  */
 
-const Action = forwardRef<ButtonProps, 'button'>((props, ref) => (
-    <Button
+const Action = forwardRef<ButtonProps | MotionProps, 'button'>((props, ref) => (
+    <MotionButton
         boxSize="4rem"
         p="0"
         borderRadius="full"
@@ -42,7 +43,7 @@ const Action = forwardRef<ButtonProps, 'button'>((props, ref) => (
         ref={ref}
     >
         <AiOutlineArrowRight boxSize="50%" fill="white" />
-    </Button>
+    </MotionButton>
 ));
 /**
  * Start page for first time users
@@ -96,7 +97,14 @@ const Start = () => {
                     A pomodoro app that gets you working
                 </MotionHeading>
 
-                <Action as={Link} to="/login" alignSelf="end" />
+                <Action
+                    as={Link}
+                    to="/login"
+                    alignSelf="end"
+                    initial="initial"
+                    animate="in"
+                    variants={StartAnimation.Action}
+                />
             </Flex>
         </Box>
     );
