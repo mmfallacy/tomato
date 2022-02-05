@@ -12,6 +12,8 @@ The following are screenshots of the planned UI
 
 <img title="" src="https://github.com/mmfallacy/tomato/blob/main/assets/screenshots.png?raw=true" alt="Screenshots.png" width="731">
 
+![](https://github.com/mmfallacy/tomato/blob/main/assets/start.gif?raw=true)
+
 ## Installation and Setup Instructions
 
 Clone this repository. You will need `node` and `npm` or `yarn` installed on your machine
@@ -31,13 +33,3 @@ Start Test Server: `npm dev` or `yarn dev`
 ---
 
  *README Template from [martensonbj/readme-template.md]([Personal project README template · GitHub](https://gist.github.com/martensonbj/6bf2ec2ed55f5be723415ea73c4557c4#file-readme-template-md))*
-
-
-
-
-
-
-
-
-
-
