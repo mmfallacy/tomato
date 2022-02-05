@@ -81,11 +81,12 @@ const OnDismount: Animation = {
             default: {
                 ...DefaultTransitions,
                 delay: 1,
-                duration: 0.75,
+                duration: 0.3,
+                ease: 'linear',
             },
-            background: { delay: 1.5, duration: 0.2 },
+            background: { delay: 1.1, duration: 0.2 },
             transform: {
-                delay: 0.5,
+                delay: 0.3,
                 duration: 2,
             },
         },
@@ -106,7 +107,7 @@ const OnDismount: Animation = {
         background: Colors.brand[300],
         transition: {
             ...DefaultTransitions,
-            delay: 1.5,
+            delay: 1.1,
             duration: 0.2,
             ease: 'linear',
         },
