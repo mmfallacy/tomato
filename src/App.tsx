@@ -1,6 +1,6 @@
 import { Route } from 'react-router-dom';
 import { AnimatedRoutes, MobileWrapper } from '@/components';
-import { Login, Start } from '@/routes';
+import { ComponentsTestPage, Login, Start } from '@/routes';
 
 function App() {
     return (
@@ -8,6 +8,7 @@ function App() {
             <AnimatedRoutes>
                 <Route path="/" element={<Start />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/dev" element={<ComponentsTestPage />} />
             </AnimatedRoutes>
         </MobileWrapper>
     );
