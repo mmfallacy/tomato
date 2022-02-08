@@ -1,4 +1,5 @@
 import { Flex, Heading, Text } from '@chakra-ui/react';
+import Pattern from './Slice/patterns/food.svg';
 
 interface SliceProps {
     bg?: string;
