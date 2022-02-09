@@ -21,14 +21,18 @@ type SliceVariantObject = {
 interface SliceProps {
     bg?: string;
     variant: SliceVariants;
+    title: string;
+    numberOfSessions: number;
 }
 
 const defaultProps: SliceProps = {
     bg: 'gray',
     variant: 'lg',
+    title: 'Sample Slice',
+    numberOfSessions: 4,
 };
 
-const Slice = ({ bg, variant }: SliceProps) => {
+const Slice = ({ bg, variant, title, numberOfSessions }: SliceProps) => {
     const Variants: SliceVariantObject = {
         sm: {
             body: {
@@ -80,9 +84,9 @@ const Slice = ({ bg, variant }: SliceProps) => {
             bgBlendMode="overlay"
             {...currentVariant.body}
         >
-            <Text {...currentVariant.subtext}>4 sessions</Text>
+            <Text {...currentVariant.subtext}>{numberOfSessions} sessions</Text>
             <Heading {...currentVariant.label} textAlign="right">
-                A Very Long Slice Name And Slice Number #1
+                {title}
             </Heading>
         </Flex>
     );
