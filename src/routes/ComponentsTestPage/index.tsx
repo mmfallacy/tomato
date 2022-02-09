@@ -7,7 +7,7 @@ const ComponentsTestPage = () => {
             <Heading fontSize="2xl" m="2rem auto" w="80%" textAlign="center">
                 This is a test page for component development
             </Heading>
-            <Slice bg="brand.500" />
+            <Slice bg="brand.500" variant="xl" />
         </Box>
     );
 };
