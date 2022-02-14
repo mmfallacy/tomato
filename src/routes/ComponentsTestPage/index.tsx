@@ -34,9 +34,9 @@ const ComponentsTestPage = () => {
                     numberOfSessions={4}
                     key="xl"
                 />
-                {PatternEnum.map((pattern) => (
+                {PatternEnum.map((pattern, i) => (
                     <Slice
-                        bg="accent.300"
+                        bg={i % 2 ? 'accent.300' : 'brand.500'}
                         variant="xl"
                         title={`Sample Slice for pattern ${pattern}`}
                         pattern={pattern}

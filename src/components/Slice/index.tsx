@@ -94,7 +94,6 @@ const Slice = ({
             alignItems="end"
             color="white"
             pos="relative"
-            bgBlendMode="overlay"
             _before={{
                 content: `' '`,
                 d: 'block',
@@ -103,9 +102,11 @@ const Slice = ({
                 top: 0,
                 w: '100%',
                 h: '100%',
+                bg: bg,
                 opacity: 0.7,
                 bgImage: `url(${pattern != undefined && Patterns[pattern]})`,
                 borderRadius: '1.5rem',
+                bgBlendMode: 'overlay',
             }}
             {...currentVariant.body}
         >
