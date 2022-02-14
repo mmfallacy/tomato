@@ -2,7 +2,7 @@ export { default as anchor } from './anchors.svg';
 export { default as autumn } from './autumn.svg';
 export { default as bubbles } from './bubbles.svg';
 export { default as circuit } from './circuit.svg';
-export { default as cogs } from './contour.svg';
+export { default as cogs } from './cogs.svg';
 export { default as contour } from './contour.svg';
 export { default as diagonal } from './diagonal.svg';
 export { default as food } from './food.svg';
