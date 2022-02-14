@@ -85,7 +85,7 @@ const Slice = ({ bg, variant, title, numberOfSessions }: SliceProps) => {
             {...currentVariant.body}
         >
             <Text {...currentVariant.subtext}>{numberOfSessions} sessions</Text>
-            <Heading {...currentVariant.label} textAlign="right">
+            <Heading {...currentVariant.label} textAlign="right" w="80%">
                 {title}
             </Heading>
         </Flex>
