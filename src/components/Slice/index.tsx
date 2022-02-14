@@ -105,6 +105,7 @@ const Slice = ({
                 h: '100%',
                 opacity: 0.3,
                 bgImage: `url(${pattern != undefined && Patterns[pattern]})`,
+                borderRadius: '1.5rem',
             }}
             {...currentVariant.body}
         >
