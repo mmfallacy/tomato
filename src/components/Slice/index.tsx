@@ -9,9 +9,9 @@ import {
 
 import * as Patterns from './Patterns';
 
-export type PatternEnumType = keyof typeof Patterns;
+export type PatternEnumType = keyof typeof Patterns | undefined;
 
-export const PatternEnum = Object.keys(Patterns) as PatternsEnumType[];
+export const PatternEnum = Object.keys(Patterns) as PatternEnumType[];
 
 type SliceVariants = 'sm' | 'lg' | 'xl';
 
@@ -26,7 +26,7 @@ type SliceVariantObject = {
 interface SliceProps {
     bg?: string;
     variant: SliceVariants;
-    pattern: PatternEnum;
+    pattern: PatternEnumType;
     title: string;
     numberOfSessions: number;
 }
