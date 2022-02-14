@@ -6,7 +6,12 @@ import {
     Text,
     TextProps,
 } from '@chakra-ui/react';
-import Pattern from './patterns/food.svg';
+
+import * as Patterns from './Patterns';
+
+export type PatternEnumType = keyof typeof Patterns;
+
+export const PatternEnum = Object.keys(Patterns) as PatternsEnumType[];
 
 type SliceVariants = 'sm' | 'lg' | 'xl';
 
@@ -21,6 +26,7 @@ type SliceVariantObject = {
 interface SliceProps {
     bg?: string;
     variant: SliceVariants;
+    pattern: PatternEnum;
     title: string;
     numberOfSessions: number;
 }
@@ -28,11 +34,18 @@ interface SliceProps {
 const defaultProps: SliceProps = {
     bg: 'gray',
     variant: 'lg',
+    pattern: undefined,
     title: 'Sample Slice',
     numberOfSessions: 4,
 };
 
-const Slice = ({ bg, variant, title, numberOfSessions }: SliceProps) => {
+const Slice = ({
+    bg,
+    variant,
+    pattern,
+    title,
+    numberOfSessions,
+}: SliceProps) => {
     const Variants: SliceVariantObject = {
         sm: {
             body: {
@@ -80,7 +93,7 @@ const Slice = ({ bg, variant, title, numberOfSessions }: SliceProps) => {
             flexDir="column-reverse"
             alignItems="end"
             color="white"
-            bgImage={`url(${Pattern})`}
+            bgImage={`url(${pattern != undefined && Patterns[pattern]})`}
             bgBlendMode="overlay"
             {...currentVariant.body}
         >

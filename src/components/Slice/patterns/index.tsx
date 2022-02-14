@@ -1,0 +1,14 @@
+export { default as anchor } from './anchors.svg';
+export { default as autumn } from './autumn.svg';
+export { default as bubbles } from './bubbles.svg';
+export { default as circuit } from './circuit.svg';
+export { default as cogs } from './contour.svg';
+export { default as contour } from './contour.svg';
+export { default as diagonal } from './diagonal.svg';
+export { default as food } from './food.svg';
+export { default as hexagon } from './hexagon.svg';
+export { default as moroccan } from './moroccan.svg';
+export { default as plus } from './plus.svg';
+export { default as skulls } from './skulls.svg';
+export { default as tictactoe } from './tictactoe.svg';
+export { default as zigzag } from './zigzag.svg';
