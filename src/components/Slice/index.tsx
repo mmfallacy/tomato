@@ -93,12 +93,30 @@ const Slice = ({
             flexDir="column-reverse"
             alignItems="end"
             color="white"
-            bgImage={`url(${pattern != undefined && Patterns[pattern]})`}
+            pos="relative"
             bgBlendMode="overlay"
+            _before={{
+                content: `' '`,
+                d: 'block',
+                pos: 'absolute',
+                left: 0,
+                top: 0,
+                w: '100%',
+                h: '100%',
+                opacity: 0.3,
+                bgImage: `url(${pattern != undefined && Patterns[pattern]})`,
+            }}
             {...currentVariant.body}
         >
-            <Text {...currentVariant.subtext}>{numberOfSessions} sessions</Text>
-            <Heading {...currentVariant.label} textAlign="right" w="80%">
+            <Text {...currentVariant.subtext} pos="relative">
+                {numberOfSessions} sessions
+            </Text>
+            <Heading
+                {...currentVariant.label}
+                pos="relative"
+                textAlign="right"
+                w="80%"
+            >
                 {title}
             </Heading>
         </Flex>
